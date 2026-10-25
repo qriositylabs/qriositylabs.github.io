@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Qriosity Labs">
+  <title>Qriosity Labs</title>
+  <rect width="64" height="64" rx="14" fill="#101935"/>
+  <g transform="translate(6.9 6.9) scale(0.78)">
+    <circle cx="25.6" cy="25.6" r="19" fill="none" stroke="#FFFFFF" stroke-width="9"/>
+    <line x1="40.5" y1="40.5" x2="57" y2="57" stroke="#FFFFFF" stroke-width="10.5" stroke-linecap="round"/>
+    <path d="M25.6 12.8 C28 19.4 31.8 23.2 38.4 25.6 C31.8 28 28 31.8 25.6 38.4 C23.2 31.8 19.4 28 12.8 25.6 C19.4 23.2 23.2 19.4 25.6 12.8Z" fill="#C9E77B"/>
+  </g>
+</svg>

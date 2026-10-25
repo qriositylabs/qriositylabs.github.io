@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start a project | Qriosity Labs</title>
+  <meta name="description" content="Tell Qriosity Labs what you're working on and we'll get back to you within two working days.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.className = "js" + ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches ? " reveal-ready" : "");</script>
+  <script src="js/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header on-navy">
+    <div class="container header-bar">
+      <a class="brand" href="index.html"><img src="assets/qriosity-logo-horizontal-white.svg" alt="Qriosity Labs home" width="216" height="34"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="btn btn-leaf" href="contact.html" aria-current="page">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero blueprint on-navy" aria-labelledby="page-title">
+      <div class="container contact-grid">
+        <div>
+          <h1 id="page-title">Start a project</h1>
+          <p>Tell us what you're working on and we'll get back to you within two working days.</p>
+          <!-- Placeholder: replace hello@example.com here and in the form action below with the real address -->
+          <p>Prefer to write it yourself?</p>
+          <p><a class="btn btn-outline btn-sm arrow" href="mailto:hello@example.com">Email hello@example.com</a></p>
+        </div>
+        <!-- Without JS the browser sends the form to the mailto: action. With JS, js/site.js validates it,
+             then opens the visitor's email app with a readable message addressed to the same mailto: action. -->
+        <form class="project-form" id="project-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <p class="field-error" id="name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+            <p class="field-error" id="email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="building">What are you building?</label>
+            <textarea id="building" name="building" rows="4" required aria-describedby="building-error"></textarea>
+            <p class="field-error" id="building-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="size">Project size</label>
+            <select id="size" name="size">
+              <option>Not sure yet</option>
+              <option>Small (under 4 weeks)</option>
+              <option>Medium (1 to 3 months)</option>
+              <option>Large (3+ months)</option>
+            </select>
+          </div>
+          <div>
+            <button class="btn btn-leaf" type="submit">Send project details</button>
+          </div>
+          <p class="form-success" id="form-success" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="next-title">
+      <div class="container">
+        <h2 id="next-title">What happens next</h2>
+        <!-- Draft copy: review before launch -->
+        <ol class="steps steps-3" role="list">
+          <li>
+            <h3>We reply</h3>
+            <p>Within two working days, with any questions we have about your project.</p>
+          </li>
+          <li>
+            <h3>A 20-minute call</h3>
+            <p>We talk through what you need and what a good result looks like.</p>
+          </li>
+          <li>
+            <h3>A plan and a quote</h3>
+            <p>You get the steps, the timeline, and the cost in writing before any work starts.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-navy">
+    <div class="container footer-grid">
+      <a href="index.html"><img src="assets/qriosity-logo-horizontal-white.svg" alt="Qriosity Labs home" width="184" height="29"></a>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p>@qriositylabs</p>
+        <p>© 2026 Qriosity Labs</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

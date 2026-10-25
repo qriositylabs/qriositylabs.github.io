@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qriosity Labs: enterprise AI you can govern, audit and own</title>
+  <meta name="description" content="Qriosity Labs builds AI agents and knowledge systems that your risk, security and engineering teams can govern, audit and own.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.className = "js" + ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches ? " reveal-ready" : "");</script>
+  <script src="js/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Arrowheads shared by every diagram on the page -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0 1 L9 5 L0 9 Z"/></marker>
+      <marker id="ar-leaf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk mk-leaf" d="M0 1 L9 5 L0 9 Z"/></marker>
+    </defs>
+  </svg>
+
+  <header class="site-header on-navy">
+    <div class="container header-bar">
+      <a class="brand" href="index.html"><img src="assets/qriosity-logo-horizontal-white.svg" alt="Qriosity Labs home" width="216" height="34"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="btn btn-leaf" href="contact.html">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero blueprint on-navy" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <h1 id="hero-title">Bring us the question. We'll build the answer.</h1>
+          <p class="hero-lede">We build AI agents and knowledge systems that your risk, security and engineering teams can govern, audit and own.</p>
+          <div class="hero-actions">
+            <a class="btn btn-leaf arrow" href="contact.html">Start a project</a>
+            <a class="btn btn-outline" href="work.html">See our work</a>
+          </div>
+          <p class="hero-note">most projects start with a 20-minute call</p>
+        </div>
+
+        <!-- Decorative illustration drawn from the geometry in qriosity-labs-brand-kit/logo/qriosity-icon-white.svg.
+             The lens shows the blueprint grid magnified; the sparkle animates in once on load. -->
+        <div class="magnifier" aria-hidden="true">
+          <div class="lens"></div>
+          <svg viewBox="0 0 64 64" width="440" height="440" focusable="false">
+            <circle cx="25.6" cy="25.6" r="19.3" fill="none" stroke="#FFFFFF" stroke-width="6.5"/>
+            <circle cx="42.9" cy="42.9" r="4" fill="#FFFFFF"/>
+            <line x1="42.9" y1="42.9" x2="57.1" y2="57.1" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round"/>
+            <path class="hero-sparkle" d="M25.6 12.1 C27.9 19.3 31.9 23.3 39.1 25.6 C31.9 27.9 27.9 31.9 25.6 39.1 C23.3 31.9 19.3 27.9 12.1 25.6 C19.3 23.3 23.3 19.3 25.6 12.1Z" fill="#C9E77B"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">What we build</h2>
+        <!-- Draft copy: review before launch -->
+        <ul class="grid-3" role="list">
+          <li class="card card-media">
+            <figure class="photo"><img src="assets/photos/agents.jpg" alt="The bridge of a ship, with rows of monitors and control panels" width="1200" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card-body">
+              <h3>Governed AI agents</h3>
+              <p>Agents that investigate, decide and act through controlled tools. Consequential actions wait for a person.</p>
+              <a class="btn btn-line btn-sm arrow" href="work.html#agents">See the agent projects</a>
+            </div>
+          </li>
+          <li class="card card-media">
+            <figure class="photo"><img src="assets/photos/knowledge.jpg" alt="Rolling archive shelves in a records store" width="1200" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card-body">
+              <h3>Auditable knowledge systems</h3>
+              <p>Retrieval and knowledge graphs where each answer traces to a source or a rule.</p>
+              <a class="btn btn-line btn-sm arrow" href="work.html#knowledge">See the knowledge projects</a>
+            </div>
+          </li>
+          <li class="card card-media">
+            <figure class="photo"><img src="assets/photos/ml.jpg" alt="A crate of tomatoes at different stages of ripeness" width="1200" height="600" loading="lazy" decoding="async"></figure>
+            <div class="card-body">
+              <h3>Applied machine learning</h3>
+              <p>Vision, fraud and prediction models, reported on held-out data with stated limitations.</p>
+              <a class="btn btn-line btn-sm arrow" href="work.html#ml">See the ML projects</a>
+            </div>
+          </li>
+        </ul>
+        <p><a class="btn btn-navy arrow" href="services.html">See all services</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <h2 id="process-title">How a project runs</h2>
+        <ol class="steps" role="list">
+          <li>
+            <h3>Question</h3>
+            <p>We dig into what you actually need, not just what you asked for.</p>
+          </li>
+          <li>
+            <h3>Explore</h3>
+            <p>Quick prototypes and options, so you can see ideas before committing to them.</p>
+          </li>
+          <li>
+            <h3>Build</h3>
+            <p>Weekly check-ins and working demos. No disappearing for months.</p>
+          </li>
+          <li>
+            <h3>Ship</h3>
+            <p>Launch, measure, and improve. We stick around after go-live.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <h2 id="work-title">Lab notes</h2>
+        <p class="section-intro">Recent experiments that made it out of the lab.</p>
+        <!-- Featured cards and diagrams copied from work.html. Keep them in sync. -->
+        <ol class="entries entries-3" role="list">
+          <li class="entry">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-financial">
+                <title id="fig-financial">Diagram: a planner hands work to an investigation loop. A critic sends weak findings back for remediation, and a deterministic verifier checks the result before it becomes a report in which each claim cites its evidence. ERP data, public filings and internal documents feed the investigation through read-only access.</title>
+                <text class="c" x="16" y="28">code runs the process</text>
+                <path class="l" d="M314 68 C314 28 182 28 182 64" marker-end="url(#ar)"/>
+                <text class="c" x="248" y="26" text-anchor="middle">remediate</text>
+                <rect class="n" x="16" y="70" width="80" height="44" rx="8"/><text class="t" x="56" y="97" text-anchor="middle">Plan</text>
+                <rect class="n" x="124" y="70" width="116" height="44" rx="8"/><text class="t" x="182" y="97" text-anchor="middle">Investigate</text>
+                <rect class="n" x="268" y="70" width="92" height="44" rx="8"/><text class="t" x="314" y="97" text-anchor="middle">Critique</text>
+                <rect class="n n-key" x="388" y="70" width="76" height="44" rx="8"/><text class="t t-key" x="426" y="97" text-anchor="middle">Verify</text>
+                <path class="l" d="M96 92 H121" marker-end="url(#ar)"/>
+                <path class="l" d="M240 92 H265" marker-end="url(#ar)"/>
+                <path class="l" d="M360 92 H385" marker-end="url(#ar)"/>
+                <path class="l" d="M130 168 V146 H266 V168 M198 168 V146"/>
+                <path class="l" d="M182 146 V117" marker-end="url(#ar)"/>
+                <rect class="n" x="104" y="168" width="52" height="30" rx="6"/><text class="t" x="130" y="188" text-anchor="middle">ERP</text>
+                <rect class="n" x="164" y="168" width="68" height="30" rx="6"/><text class="t" x="198" y="188" text-anchor="middle">Filings</text>
+                <rect class="n" x="240" y="168" width="52" height="30" rx="6"/><text class="t" x="266" y="188" text-anchor="middle">Docs</text>
+                <text class="c" x="198" y="222" text-anchor="middle">read-only, guarded access</text>
+                <path class="l" d="M426 114 V165" marker-end="url(#ar)"/>
+                <rect class="n" x="380" y="168" width="92" height="30" rx="6"/><text class="t" x="426" y="188" text-anchor="middle">Report</text>
+                <text class="c" x="468" y="222" text-anchor="end">each claim cites evidence</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Governed agents</p>
+              <h3>Autonomous financial investigation platform</h3>
+              <p>Explains why profitability moved, with an evidence trail an auditor can follow.</p>
+              <a class="btn btn-line btn-sm arrow" href="work.html#financial-investigation">Read the note</a>
+            </div>
+          </li>
+          <li class="entry">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-operations">
+                <title id="fig-operations">Diagram: six agents share one pipeline. They gather, assess, validate and decide, then a person approves before the agent executes and verifies the change by reading it back. Every tool call is written to an audit log.</title>
+                <text class="c" x="16" y="30">six agents, one pipeline</text>
+                <rect class="n" x="16" y="44" width="88" height="40" rx="8"/><text class="t" x="60" y="69" text-anchor="middle">Gather</text>
+                <rect class="n" x="128" y="44" width="88" height="40" rx="8"/><text class="t" x="172" y="69" text-anchor="middle">Assess</text>
+                <rect class="n" x="240" y="44" width="100" height="40" rx="8"/><text class="t" x="290" y="69" text-anchor="middle">Validate</text>
+                <rect class="n" x="364" y="44" width="100" height="40" rx="8"/><text class="t" x="414" y="69" text-anchor="middle">Decide</text>
+                <path class="l" d="M104 64 H125" marker-end="url(#ar)"/>
+                <path class="l" d="M216 64 H237" marker-end="url(#ar)"/>
+                <path class="l" d="M340 64 H361" marker-end="url(#ar)"/>
+                <path class="l" d="M414 84 V116 H70 V147" marker-end="url(#ar)"/>
+                <rect class="n n-key" x="16" y="150" width="108" height="40" rx="8"/><text class="t t-key" x="70" y="175" text-anchor="middle">Approve</text>
+                <rect class="n" x="148" y="150" width="96" height="40" rx="8"/><text class="t" x="196" y="175" text-anchor="middle">Execute</text>
+                <rect class="n" x="268" y="150" width="88" height="40" rx="8"/><text class="t" x="312" y="175" text-anchor="middle">Verify</text>
+                <rect class="n dash" x="380" y="150" width="84" height="40" rx="8"/><text class="t" x="422" y="175" text-anchor="middle">Audit log</text>
+                <path class="l" d="M124 170 H145" marker-end="url(#ar)"/>
+                <path class="l" d="M244 170 H265" marker-end="url(#ar)"/>
+                <path class="l" d="M356 170 H377" marker-end="url(#ar)"/>
+                <text class="c" x="70" y="214" text-anchor="middle">a person approves</text>
+                <text class="c" x="312" y="214" text-anchor="middle">read-back</text>
+                <text class="c" x="422" y="214" text-anchor="middle">every tool call</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Governed agents</p>
+              <h3>Operations automation agents</h3>
+              <p>Six agents that investigate a business event, decide, act through controlled tools and escalate to a person when required.</p>
+              <a class="btn btn-line btn-sm arrow" href="work.html#operations-agents">Read the note</a>
+            </div>
+          </li>
+          <li class="entry">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-inspect">
+                <title id="fig-inspect">Diagram: a piece of produce with two defects outlined and measured. Background removal and four segmentation methods find each defect, and an ontology reasoner returns a diagnosis together with its reasoning.</title>
+                <circle class="n" cx="112" cy="130" r="76"/>
+                <path class="i" d="M112 54 C112 44 116 38 122 34"/>
+                <path class="i i-mist" d="M120 42 C130 28 150 28 158 36 C148 46 130 48 120 42 Z"/>
+                <path class="f-mist" opacity="0.8" d="M76 114 C82 104 98 106 100 118 C102 130 88 136 80 130 C74 126 72 120 76 114 Z"/>
+                <rect class="i i-leaf dash" x="66" y="98" width="42" height="42"/>
+                <path class="f-mist" opacity="0.8" d="M134 156 C140 150 152 152 152 162 C152 172 140 174 136 168 C132 164 130 160 134 156 Z"/>
+                <rect class="i i-leaf dash" x="124" y="144" width="36" height="36"/>
+                <text class="c" x="112" y="226" text-anchor="middle">size · colour · coverage</text>
+                <path class="l" d="M176 84 C200 60 210 42 233 42" marker-end="url(#ar)"/>
+                <rect class="n" x="236" y="24" width="228" height="36" rx="6"/><text class="t" x="350" y="47" text-anchor="middle">Remove background</text>
+                <rect class="n" x="236" y="76" width="228" height="36" rx="6"/><text class="t" x="350" y="99" text-anchor="middle">Segment (4 methods)</text>
+                <rect class="n" x="236" y="128" width="228" height="36" rx="6"/><text class="t" x="350" y="151" text-anchor="middle">Ontology reasoner</text>
+                <rect class="n n-key" x="236" y="180" width="228" height="36" rx="6"/><text class="t t-key" x="350" y="203" text-anchor="middle">Diagnosis + reason</text>
+                <path class="l" d="M350 60 V73" marker-end="url(#ar)"/>
+                <path class="l" d="M350 112 V125" marker-end="url(#ar)"/>
+                <path class="l" d="M350 164 V177" marker-end="url(#ar)"/>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Applied machine learning</p>
+              <h3>Explainable visual inspection</h3>
+              <p>Finds, measures and explains defects on produce, and shows the reasoning behind each diagnosis.</p>
+              <a class="btn btn-line btn-sm arrow" href="work.html#visual-inspection">Read the note</a>
+            </div>
+          </li>
+        </ol>
+        <p><a class="btn btn-navy arrow" href="work.html">See all 15 lab notes</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">The curious people behind the lab</h2>
+        <p>We're a small team of designers and developers who like hard questions. We ask a lot of them early, then build in small steps so you can see real progress every week.</p>
+        <p><a class="btn btn-line arrow" href="about.html">Meet the team</a></p>
+      </div>
+    </section>
+
+    <section class="contact blueprint on-navy" aria-labelledby="cta-title">
+      <div class="container cta-grid">
+        <div>
+          <h2 id="cta-title">What are you building?</h2>
+          <p>Tell us what you're working on and we'll get back to you within two working days.</p>
+        </div>
+        <a class="btn btn-leaf arrow" href="contact.html">Start a project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-navy">
+    <div class="container footer-grid">
+      <a href="index.html"><img src="assets/qriosity-logo-horizontal-white.svg" alt="Qriosity Labs home" width="184" height="29"></a>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p>@qriositylabs</p>
+        <p>© 2026 Qriosity Labs</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

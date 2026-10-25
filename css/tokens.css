@@ -1,0 +1,18 @@
+/* Copy of qriosity-labs-brand-kit/web/tokens.css. The Google Fonts stylesheet is linked from each page's <head> instead of @imported here. */
+
+:root {
+  --q-navy: #101935;
+  --q-navy-hover: #1F2B57;
+  --q-navy-line: #24315E;
+  --q-navy-soft: #3A4466;
+  --q-mist: #B9C3DD;
+  --q-leaf: #C9E77B;
+  --q-blue: #2B59C3;
+  --q-paper: #F3F6FB;
+  --q-grid: #D5E1F5;
+
+  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+  --font-note: "Caveat", cursive;
+  --radius: 8px;
+}

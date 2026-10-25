@@ -1,0 +1,1018 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab notes | Qriosity Labs</title>
+  <meta name="description" content="Fifteen lab notes from Qriosity Labs, from governed AI agents to quantum research, each with its controls and evidence.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@500&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.className = "js" + ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches ? " reveal-ready" : "");</script>
+  <script src="js/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Arrowheads shared by every diagram on the page -->
+  <svg class="svg-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0 1 L9 5 L0 9 Z"/></marker>
+      <marker id="ar-leaf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="mk mk-leaf" d="M0 1 L9 5 L0 9 Z"/></marker>
+    </defs>
+  </svg>
+
+  <header class="site-header on-navy">
+    <div class="container header-bar">
+      <a class="brand" href="index.html"><img src="assets/qriosity-logo-horizontal-white.svg" alt="Qriosity Labs home" width="216" height="34"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-icon" aria-hidden="true"></span>
+        <span>Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="work.html" aria-current="page">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <a class="btn btn-leaf" href="contact.html">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero blueprint on-navy" aria-labelledby="page-title">
+      <div class="container">
+        <h1 id="page-title">Lab notes</h1>
+        <p class="hero-lede">Fifteen projects, from governed AI agents to quantum research. Each note covers the problem, what we built, how it is controlled, and the evidence behind it.</p>
+        <p>"Reference" and "demonstration" mean the work ran on synthetic or public data. Client engagements are summarised at a level that protects confidentiality.</p>
+        <ul class="chips" aria-label="Jump to an area">
+          <li><a class="chip" href="#agents">Governed agents</a></li>
+          <li><a class="chip" href="#knowledge">Knowledge systems</a></li>
+          <li><a class="chip" href="#simulation">Simulation</a></li>
+          <li><a class="chip" href="#ml">Applied ML</a></li>
+          <li><a class="chip" href="#research">Advanced research</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- The financial-investigation, operations-agents and visual-inspection cards (with their diagrams)
+         also appear on index.html. Keep them in sync. -->
+
+    <section class="section" id="agents" aria-labelledby="agents-title">
+      <div class="container">
+        <div class="area-head">
+          <div>
+            <h2 id="agents-title">Governed autonomous agents</h2>
+            <p class="section-intro">Agents that investigate, decide and act through controlled tools. Autonomy is set per workflow, from advisory to act-with-approval. Every step is logged, and consequential actions require human approval.</p>
+          </div>
+          <figure class="photo"><img src="assets/photos/agents.jpg" alt="The bridge of a ship, with rows of monitors and control panels" width="1200" height="600" loading="lazy" decoding="async"></figure>
+        </div>
+        <ol class="entries" role="list">
+          <li class="entry" id="financial-investigation">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-financial">
+                <title id="fig-financial">Diagram: a planner hands work to an investigation loop. A critic sends weak findings back for remediation, and a deterministic verifier checks the result before it becomes a report in which each claim cites its evidence. ERP data, public filings and internal documents feed the investigation through read-only access.</title>
+                <text class="c" x="16" y="28">code runs the process</text>
+                <path class="l" d="M314 68 C314 28 182 28 182 64" marker-end="url(#ar)"/>
+                <text class="c" x="248" y="26" text-anchor="middle">remediate</text>
+                <rect class="n" x="16" y="70" width="80" height="44" rx="8"/><text class="t" x="56" y="97" text-anchor="middle">Plan</text>
+                <rect class="n" x="124" y="70" width="116" height="44" rx="8"/><text class="t" x="182" y="97" text-anchor="middle">Investigate</text>
+                <rect class="n" x="268" y="70" width="92" height="44" rx="8"/><text class="t" x="314" y="97" text-anchor="middle">Critique</text>
+                <rect class="n n-key" x="388" y="70" width="76" height="44" rx="8"/><text class="t t-key" x="426" y="97" text-anchor="middle">Verify</text>
+                <path class="l" d="M96 92 H121" marker-end="url(#ar)"/>
+                <path class="l" d="M240 92 H265" marker-end="url(#ar)"/>
+                <path class="l" d="M360 92 H385" marker-end="url(#ar)"/>
+                <path class="l" d="M130 168 V146 H266 V168 M198 168 V146"/>
+                <path class="l" d="M182 146 V117" marker-end="url(#ar)"/>
+                <rect class="n" x="104" y="168" width="52" height="30" rx="6"/><text class="t" x="130" y="188" text-anchor="middle">ERP</text>
+                <rect class="n" x="164" y="168" width="68" height="30" rx="6"/><text class="t" x="198" y="188" text-anchor="middle">Filings</text>
+                <rect class="n" x="240" y="168" width="52" height="30" rx="6"/><text class="t" x="266" y="188" text-anchor="middle">Docs</text>
+                <text class="c" x="198" y="222" text-anchor="middle">read-only, guarded access</text>
+                <path class="l" d="M426 114 V165" marker-end="url(#ar)"/>
+                <rect class="n" x="380" y="168" width="92" height="30" rx="6"/><text class="t" x="426" y="188" text-anchor="middle">Report</text>
+                <text class="c" x="468" y="222" text-anchor="end">each claim cites evidence</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Finance</p>
+              <h3>Autonomous financial investigation platform</h3>
+              <p>Explains why profitability moved, with an evidence trail an auditor can follow.</p>
+              <p class="entry-meta"><span>Reference platform: CI, docs, synthetic ERP</span><span class="badge">Autonomy: advise</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Finance questions draw on ERPs, external filings and internal documents. An answer without provenance cannot be audited or signed off.</dd>
+                  <dt>The solution</dt>
+                  <dd>An investigation platform in which code, not the prompt, controls the process: planner → investigation loop → adversarial critic → remediation loop → deterministic verifier.</dd>
+                  <dt>Controls and evidence</dt>
+                  <dd>
+                    <ul>
+                      <li>Every fact is stored with its source. Every claim is classified (fact, calculation, assumption, scenario or inference) and lists the evidence for and against it.</li>
+                      <li>Database access is read-only and guarded. State, memory, recovery and permissions are explicit policy.</li>
+                      <li>A configuration-driven evaluation suite scores the agent before any demonstration.</li>
+                    </ul>
+                  </dd>
+                  <dt>Data sources</dt>
+                  <dd>Guarded database queries, public regulatory filings, public macroeconomic series, internal documents, anomaly detection and a scenario engine.</dd>
+                  <dt>Status</dt>
+                  <dd>Full platform with continuous integration, documentation and a demonstration script. It runs on a labelled synthetic ERP, so it can be evaluated without client data.</dd>
+                  <dt>Autonomy level</dt>
+                  <dd>Advise. The platform reads, analyses and reports, and a person acts on the findings.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Corporate finance, internal audit and risk functions.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python 3.11, FastAPI, SQLAlchemy (Postgres/SQLite), Pydantic, OpenAI Responses API, Next.js, Tailwind, Docker Compose, GitHub Actions (ruff, mypy, pytest)</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="operations-agents">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-operations">
+                <title id="fig-operations">Diagram: six agents share one pipeline. They gather, assess, validate and decide, then a person approves before the agent executes and verifies the change by reading it back. Every tool call is written to an audit log.</title>
+                <text class="c" x="16" y="30">six agents, one pipeline</text>
+                <rect class="n" x="16" y="44" width="88" height="40" rx="8"/><text class="t" x="60" y="69" text-anchor="middle">Gather</text>
+                <rect class="n" x="128" y="44" width="88" height="40" rx="8"/><text class="t" x="172" y="69" text-anchor="middle">Assess</text>
+                <rect class="n" x="240" y="44" width="100" height="40" rx="8"/><text class="t" x="290" y="69" text-anchor="middle">Validate</text>
+                <rect class="n" x="364" y="44" width="100" height="40" rx="8"/><text class="t" x="414" y="69" text-anchor="middle">Decide</text>
+                <path class="l" d="M104 64 H125" marker-end="url(#ar)"/>
+                <path class="l" d="M216 64 H237" marker-end="url(#ar)"/>
+                <path class="l" d="M340 64 H361" marker-end="url(#ar)"/>
+                <path class="l" d="M414 84 V116 H70 V147" marker-end="url(#ar)"/>
+                <rect class="n n-key" x="16" y="150" width="108" height="40" rx="8"/><text class="t t-key" x="70" y="175" text-anchor="middle">Approve</text>
+                <rect class="n" x="148" y="150" width="96" height="40" rx="8"/><text class="t" x="196" y="175" text-anchor="middle">Execute</text>
+                <rect class="n" x="268" y="150" width="88" height="40" rx="8"/><text class="t" x="312" y="175" text-anchor="middle">Verify</text>
+                <rect class="n dash" x="380" y="150" width="84" height="40" rx="8"/><text class="t" x="422" y="175" text-anchor="middle">Audit log</text>
+                <path class="l" d="M124 170 H145" marker-end="url(#ar)"/>
+                <path class="l" d="M244 170 H265" marker-end="url(#ar)"/>
+                <path class="l" d="M356 170 H377" marker-end="url(#ar)"/>
+                <text class="c" x="70" y="214" text-anchor="middle">a person approves</text>
+                <text class="c" x="312" y="214" text-anchor="middle">read-back</text>
+                <text class="c" x="422" y="214" text-anchor="middle">every tool call</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Supply chain, maintenance, field service</p>
+              <h3>Operations automation agents</h3>
+              <p>Six agents that investigate a business event, decide, act through controlled tools and escalate to a person when required.</p>
+              <p class="entry-meta"><span>Reference build: six agents, synthetic data</span><span class="badge">Autonomy: act with approval</span></p>
+              <ul class="stats" role="list">
+                <li class="stat"><span class="stat-value">6</span><span class="stat-label">agents on one shared pipeline</span></li>
+                <li class="stat"><span class="stat-value">7</span><span class="stat-label">steps from event to verified action</span></li>
+              </ul>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>An agent that can commit spend or change records needs hard limits and a full audit trail before it can be connected to core systems.</dd>
+                  <dt>The solution</dt>
+                  <dd>Agents for supplier disruption, maintenance triage, field-service rescheduling, procurement exceptions (three-way match), inventory stockouts, and a cross-domain operations control tower.</dd>
+                  <dt>Controls and evidence</dt>
+                  <dd>
+                    <ul>
+                      <li>One shared pipeline: gather → assess → validate → decide → approval gate → execute → verify.</li>
+                      <li>Spend limits, approved vendors and tolerances are enforced in code. Writes are idempotent and verified by read-back. Every tool call is audited.</li>
+                      <li>Run state is persisted, so a human approval can resume the work later.</li>
+                      <li>The stockout agent survives a forced shutdown and replays safely.</li>
+                      <li>Each agent ships with deterministic evaluations and unit tests. Without a model API key it falls back to a deterministic heuristic.</li>
+                    </ul>
+                  </dd>
+                  <dt>Status</dt>
+                  <dd>All data is synthetic. The tool layer is designed to map onto a production ERP or enterprise asset-management system.</dd>
+                  <dt>Autonomy level</dt>
+                  <dd>Act with approval. Consequential actions wait for a person.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Global manufacturing, utilities, procurement and field-service operations.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python 3.12, LangGraph, MCP, FastAPI, Pydantic, SQLite (simulated ERP/EAM), TypeScript, Vite</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="conversational-commerce">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-commerce">
+                <title id="fig-commerce">Diagram: a customer chats with the agent, which reaches the retailer's catalogue and ordering systems through the Model Context Protocol to search, check delivery and build a cart. The conversation ends in a payment link that the customer completes.</title>
+                <rect class="n" x="16" y="24" width="176" height="36" rx="14"/><text class="t" x="32" y="47">Birthday gift ideas?</text>
+                <rect class="n" x="40" y="72" width="176" height="92" rx="14"/>
+                <rect class="i i-mist" x="54" y="84" width="40" height="40" rx="6"/><path class="i i-mist" d="M74 84 V124 M54 104 H94"/>
+                <rect class="i i-mist" x="102" y="84" width="40" height="40" rx="6"/><path class="i i-mist" d="M122 84 V124 M102 104 H142"/>
+                <rect class="i i-mist" x="150" y="84" width="40" height="40" rx="6"/><path class="i i-mist" d="M170 84 V124 M150 104 H190"/>
+                <text class="c" x="54" y="150">3 picks within budget</text>
+                <rect class="n" x="16" y="176" width="150" height="36" rx="14"/><text class="t" x="32" y="199">Add the second</text>
+                <path class="l" d="M216 118 H241" marker-end="url(#ar)"/>
+                <rect class="n" x="244" y="40" width="56" height="160" rx="8"/><text class="t" x="272" y="125" text-anchor="middle">MCP</text>
+                <path class="l" d="M300 51 H329" marker-end="url(#ar)"/>
+                <path class="l" d="M300 95 H329" marker-end="url(#ar)"/>
+                <path class="l" d="M300 139 H329" marker-end="url(#ar)"/>
+                <path class="l" d="M300 184 H329" marker-end="url(#ar)"/>
+                <rect class="n" x="332" y="34" width="132" height="34" rx="6"/><text class="t" x="398" y="56" text-anchor="middle">Search</text>
+                <rect class="n" x="332" y="78" width="132" height="34" rx="6"/><text class="t" x="398" y="100" text-anchor="middle">Delivery</text>
+                <rect class="n" x="332" y="122" width="132" height="34" rx="6"/><text class="t" x="398" y="144" text-anchor="middle">Cart</text>
+                <rect class="n n-key" x="332" y="166" width="132" height="36" rx="6"/><text class="t t-key" x="398" y="189" text-anchor="middle">Payment link</text>
+                <text class="c" x="398" y="224" text-anchor="middle">the customer pays</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Retail and e-commerce</p>
+              <h3>Conversational commerce agent</h3>
+              <p>A single conversation takes a customer from intent to a working payment link, in three languages.</p>
+              <p class="entry-meta"><span>Working application</span><span class="badge">Autonomy: act with approval</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Gift purchasing involves search, comparison, delivery checks, payment and tracking. Each extra step between intent and payment is an opportunity to lose the customer.</dd>
+                  <dt>The solution</dt>
+                  <dd>A chat-first agent integrated with a retailer's catalogue and ordering systems through the Model Context Protocol. Built for an industry agent-building competition in 2026.</dd>
+                  <dt>Capabilities</dt>
+                  <dd>
+                    <ul>
+                      <li>Search, delivery check, cart, guest checkout with a live payment link, and order tracking, all within the conversation.</li>
+                      <li>Photo-based search, a bundle builder that works to a stated budget, side-by-side comparison, and personalised message previews in a non-Latin script.</li>
+                      <li>Three languages, including a non-Latin script and a mixed local-English style.</li>
+                      <li>Persistent memory of recipients, occasions, location, language and budget, with a local holiday calendar.</li>
+                      <li>Streaming responses with parallel tool calls, rendered as rich product cards and delivery quotes.</li>
+                    </ul>
+                  </dd>
+                  <dt>Resilience</dt>
+                  <dd>A dependency-free integration client with synonym retry, browse fallback when search returns nothing, stale-on-error caching, jittered retries and session reconnect. Installable progressive web app that meets accessibility requirements (live regions, focus management, reduced-motion support).</dd>
+                  <dt>Autonomy level</dt>
+                  <dd>Act with approval. The customer reviews the cart and completes payment.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Retail, gifting and marketplace operators.</dd>
+                  <dt>Technology</dt>
+                  <dd>Next.js 14 (App Router), TypeScript, Tailwind, OpenAI function calling, Model Context Protocol, custom SSE protocol, Vercel</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="knowledge" aria-labelledby="knowledge-title">
+      <div class="container">
+        <div class="area-head">
+          <div>
+            <h2 id="knowledge-title">Auditable knowledge systems</h2>
+            <p class="section-intro">Retrieval, knowledge-graph and ontology solutions in which each answer traces to a source or a rule.</p>
+          </div>
+          <figure class="photo"><img src="assets/photos/knowledge.jpg" alt="Rolling archive shelves in a records store" width="1200" height="600" loading="lazy" decoding="async"></figure>
+        </div>
+        <ol class="entries" role="list">
+          <li class="entry" id="knowledge-graph-assistant">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-graph">
+                <title id="fig-graph">Diagram: a question is answered from a knowledge graph of people, companies, regions and case stories, following a path through the graph to the answer. When the graph holds no answer, the assistant falls back to web search.</title>
+                <rect class="n" x="16" y="86" width="96" height="40" rx="8"/><text class="t" x="64" y="111" text-anchor="middle">Question</text>
+                <path class="l" opacity="0.7" d="M168 70 L240 48 L306 86 L222 128 Z M222 128 L296 150 L306 86"/>
+                <path class="i i-leaf w2" d="M112 100 L161 74"/>
+                <path class="i i-leaf w2" d="M173 77 L217 121"/>
+                <path class="i i-leaf w2" d="M230 126 L364 108" marker-end="url(#ar-leaf)"/>
+                <circle class="f-white" cx="240" cy="48" r="7"/>
+                <circle class="f-white" cx="306" cy="86" r="7"/>
+                <circle class="f-white" cx="296" cy="150" r="7"/>
+                <circle class="f-leaf" cx="168" cy="70" r="8"/>
+                <circle class="f-leaf" cx="222" cy="128" r="8"/>
+                <text class="c" x="168" y="54" text-anchor="middle">person</text>
+                <text class="c" x="240" y="32" text-anchor="middle">company</text>
+                <text class="c" x="318" y="80">region</text>
+                <text class="c" x="222" y="154" text-anchor="middle">case story</text>
+                <text class="c" x="296" y="174" text-anchor="middle">person</text>
+                <rect class="n n-key" x="368" y="86" width="96" height="40" rx="8"/><text class="t t-key" x="416" y="111" text-anchor="middle">Answer</text>
+                <path class="l dash" d="M64 126 V212 H297" marker-end="url(#ar)"/>
+                <text class="c" x="80" y="204">no answer in the graph</text>
+                <rect class="n dash" x="300" y="196" width="112" height="32" rx="6"/><text class="t" x="356" y="217" text-anchor="middle">Web search</text>
+                <path class="l dash" d="M412 212 H428 V129" marker-end="url(#ar)"/>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Advisory services</p>
+              <h3>Knowledge-graph advisory assistant</h3>
+              <p>An assistant that answers from a knowledge graph first, and states clearly when the graph holds no answer.</p>
+              <p class="entry-meta"><span>Client engagement</span><span class="badge">Autonomy: advise</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Interviews and case notes hold an organisation's expertise, but the material cannot be searched. Plain vector search misses how people, companies and events relate.</dd>
+                  <dt>The solution</dt>
+                  <dd>
+                    Two connected components for an advisory product.
+                    <ul>
+                      <li><strong>The assistant:</strong> Answers questions from a Neo4j graph through a Cypher query tool, falls back to web search when the graph has no answer, and summarises long conversations to manage memory. Runs with Qdrant indexing and a Redis/Postgres-backed LangGraph server.</li>
+                      <li><strong>The extractor:</strong> Converts raw interview transcripts into a graph of people, companies, regions and case stories, with typed output ready to load.</li>
+                    </ul>
+                  </dd>
+                  <dt>Related build</dt>
+                  <dd>An incident-knowledge assistant in which a router selects vector search or generated graph queries for each question.</dd>
+                  <dt>Status</dt>
+                  <dd>Client engagement, delivered with colleagues. Client confidential.</dd>
+                  <dt>Autonomy level</dt>
+                  <dd>Advise. The assistant answers questions and does not change records.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Advisory, consulting and any firm with years of unstructured case material.</dd>
+                  <dt>Technology</dt>
+                  <dd>LangGraph, Neo4j, Qdrant, GPT-4o, Groq, Pydantic, Docker Compose</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="drug-interaction">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-drug">
+                <title id="fig-drug">Diagram: a question goes to four specialist agents for interactions, conflicts, similarity and alternative medication. Each one queries a formal medical ontology, and a language model only phrases the structured result as the answer.</title>
+                <rect class="n" x="16" y="100" width="88" height="40" rx="8"/><text class="t" x="60" y="125" text-anchor="middle">Question</text>
+                <path class="l" d="M104 120 C120 120 118 41 133 41" marker-end="url(#ar)"/>
+                <path class="l" d="M104 120 C120 120 118 87 133 87" marker-end="url(#ar)"/>
+                <path class="l" d="M104 120 C120 120 118 133 133 133" marker-end="url(#ar)"/>
+                <path class="l" d="M104 120 C120 120 118 179 133 179" marker-end="url(#ar)"/>
+                <rect class="n" x="136" y="24" width="118" height="34" rx="6"/><text class="t" x="195" y="46" text-anchor="middle">Interactions</text>
+                <rect class="n" x="136" y="70" width="118" height="34" rx="6"/><text class="t" x="195" y="92" text-anchor="middle">Conflicts</text>
+                <rect class="n" x="136" y="116" width="118" height="34" rx="6"/><text class="t" x="195" y="138" text-anchor="middle">Similarity</text>
+                <rect class="n" x="136" y="162" width="118" height="34" rx="6"/><text class="t" x="195" y="184" text-anchor="middle">Alternatives</text>
+                <path class="l" d="M254 41 H270 M254 87 H270 M254 133 H270 M254 179 H270 M270 41 V179"/>
+                <path class="l" d="M270 120 H283" marker-end="url(#ar)"/>
+                <text class="c" x="286" y="48">facts from the ontology</text>
+                <rect class="n" x="286" y="60" width="88" height="120" rx="8"/>
+                <path class="i i-mist" d="M330 82 L312 104 M330 82 L348 104 M312 104 L302 126 M312 104 L322 126 M348 104 L358 126"/>
+                <circle class="f-white" cx="330" cy="82" r="4"/>
+                <circle class="f-white" cx="312" cy="104" r="4"/>
+                <circle class="f-white" cx="348" cy="104" r="4"/>
+                <circle class="f-white" cx="302" cy="126" r="3"/>
+                <circle class="f-white" cx="322" cy="126" r="3"/>
+                <circle class="f-white" cx="358" cy="126" r="3"/>
+                <text class="t" x="330" y="160" text-anchor="middle">Ontology</text>
+                <path class="l" d="M374 120 H397" marker-end="url(#ar)"/>
+                <rect class="n n-key" x="400" y="100" width="64" height="40" rx="8"/><text class="t t-key" x="432" y="125" text-anchor="middle">Answer</text>
+                <text class="c" x="468" y="204" text-anchor="end">the model only phrases it</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Life sciences</p>
+              <h3>Ontology-grounded drug-interaction analysis</h3>
+              <p>Drug-interaction answers that trace to a formal medical ontology rather than to a model's recollection.</p>
+              <p class="entry-meta"><span>Public demonstration</span><span class="badge">Autonomy: advise</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>In a clinical setting, a fluent but incorrect answer is worse than no answer.</dd>
+                  <dt>The solution</dt>
+                  <dd>Four specialist agents (interaction, conflict, similarity and alternative medication), orchestrated with LangGraph. Each queries an OWL/RDF ontology. A language model then converts the structured results into a readable answer.</dd>
+                  <dt>Controls and evidence</dt>
+                  <dd>Facts come from the ontology, and the language model only phrases them. Every query is logged.</dd>
+                  <dt>Status</dt>
+                  <dd>Public demonstration with inference tracking, a web interface and a command-line tool.</dd>
+                  <dt>Autonomy level</dt>
+                  <dd>Advise. The system answers questions and does not act on them.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Pharma, clinical decision support and any domain governed by a formal rulebook.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python, LangGraph, LangChain, RDFlib/OWL, Groq (open-source models), Streamlit, Hugging Face Spaces</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="document-intelligence">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-docs">
+                <title id="fig-docs">Diagram: a technical paper is read by parallel agents for terminology, figures, mathematics and structure, which produce a glossary, answers and figure notes. The source text is left intact.</title>
+                <rect class="n" x="16" y="32" width="96" height="176" rx="6"/>
+                <path class="i i-mist" d="M30 52 H98 M30 64 H90 M30 76 H98"/>
+                <rect class="i i-mist" x="30" y="90" width="68" height="44" rx="3"/>
+                <path class="i i-mist" d="M38 124 L54 108 L66 118 L76 104 L90 124"/>
+                <text class="c" x="30" y="158">∑ f(x) dx</text>
+                <path class="i i-mist" d="M30 172 H98 M30 184 H82"/>
+                <text class="c" x="64" y="228" text-anchor="middle">source left intact</text>
+                <text class="c" x="148" y="20">parallel, with live progress</text>
+                <path class="l" d="M112 120 H128 M128 47 V185"/>
+                <path class="l" d="M128 47 H145" marker-end="url(#ar)"/>
+                <path class="l" d="M128 93 H145" marker-end="url(#ar)"/>
+                <path class="l" d="M128 139 H145" marker-end="url(#ar)"/>
+                <path class="l" d="M128 185 H145" marker-end="url(#ar)"/>
+                <rect class="n" x="148" y="30" width="108" height="34" rx="6"/><text class="t" x="202" y="52" text-anchor="middle">Terms</text>
+                <rect class="n" x="148" y="76" width="108" height="34" rx="6"/><text class="t" x="202" y="98" text-anchor="middle">Figures</text>
+                <rect class="n" x="148" y="122" width="108" height="34" rx="6"/><text class="t" x="202" y="144" text-anchor="middle">Maths</text>
+                <rect class="n" x="148" y="168" width="108" height="34" rx="6"/><text class="t" x="202" y="190" text-anchor="middle">Structure</text>
+                <path class="l" d="M256 47 H284 M256 93 H284 M256 139 H284 M256 185 H284 M284 47 V185"/>
+                <path class="l" d="M284 58 H305" marker-end="url(#ar)"/>
+                <path class="l" d="M284 120 H305" marker-end="url(#ar)"/>
+                <path class="l" d="M284 182 H305" marker-end="url(#ar)"/>
+                <rect class="n" x="308" y="40" width="156" height="36" rx="6"/><text class="t" x="386" y="63" text-anchor="middle">Glossary</text>
+                <rect class="n n-key" x="308" y="102" width="156" height="36" rx="6"/><text class="t t-key" x="386" y="125" text-anchor="middle">Answers</text>
+                <rect class="n" x="308" y="164" width="156" height="36" rx="6"/><text class="t" x="386" y="187" text-anchor="middle">Figure notes</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Research-intensive teams</p>
+              <h3>Technical document intelligence</h3>
+              <p>Dense technical papers made easier to read, with the source text left intact.</p>
+              <p class="entry-meta"><span>Three iterations, end-to-end demonstration</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Specialists spend hours on terminology, equations and figures before reaching the substance.</dd>
+                  <dt>The solution</dt>
+                  <dd>
+                    Three iterations, from a research prototype to a full-stack application to a containerised retrieval stack.
+                    <ul>
+                      <li>Parallel analysis agents cover terminology, figures (through vision models), mathematics and document structure, and report progress in real time.</li>
+                      <li>The latest version routes each request (question, glossary or figure) across a vector store, cache and relational database.</li>
+                    </ul>
+                  </dd>
+                  <dt>Evidence</dt>
+                  <dd>Run end to end on a landmark machine-learning paper: sections parsed, figures described, glossary built and a quality report produced.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>R&amp;D, due-diligence and compliance teams with heavy technical reading.</dd>
+                  <dt>Technology</dt>
+                  <dd>FastAPI, LangGraph, Azure OpenAI (GPT-4o and embeddings), Next.js 14, KaTeX, Qdrant, Redis, Postgres, Docker Compose</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="price-intelligence">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-prices">
+                <title id="fig-prices">Diagram: collectors take dated snapshots from three supermarket chains and normalise unit prices and promotions into one product model. A free-text shopping list is searched and reranked to find the lowest-priced items in stock.</title>
+                <rect class="n" x="16" y="40" width="92" height="36" rx="6"/><text class="t" x="62" y="63" text-anchor="middle">Chain A</text>
+                <rect class="n" x="16" y="102" width="92" height="36" rx="6"/><text class="t" x="62" y="125" text-anchor="middle">Chain B</text>
+                <rect class="n" x="16" y="164" width="92" height="36" rx="6"/><text class="t" x="62" y="187" text-anchor="middle">Chain C</text>
+                <text class="c" x="62" y="224" text-anchor="middle">dated snapshots</text>
+                <path class="l" d="M108 58 H124 M108 120 H124 M108 182 H124 M124 58 V182"/>
+                <path class="l" d="M124 120 H141" marker-end="url(#ar)"/>
+                <rect class="n" x="144" y="100" width="104" height="40" rx="8"/><text class="t" x="196" y="125" text-anchor="middle">Normalise</text>
+                <text class="c" x="196" y="162" text-anchor="middle">unit prices</text>
+                <path class="l" d="M248 120 H269" marker-end="url(#ar)"/>
+                <rect class="n dash" x="272" y="28" width="112" height="34" rx="6"/><text class="t" x="328" y="50" text-anchor="middle">Shopping list</text>
+                <path class="l" d="M328 62 V97" marker-end="url(#ar)"/>
+                <rect class="n" x="272" y="100" width="112" height="40" rx="8"/><text class="t" x="328" y="125" text-anchor="middle">Search</text>
+                <text class="c" x="328" y="162" text-anchor="middle">vector search, rerank</text>
+                <path class="l" d="M384 120 H397" marker-end="url(#ar)"/>
+                <text class="c" x="468" y="88" text-anchor="end">cheapest in stock</text>
+                <rect class="n n-key" x="400" y="100" width="64" height="40" rx="8"/><text class="t t-key" x="432" y="125" text-anchor="middle">Basket</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Retail data</p>
+              <h3>Retail price intelligence</h3>
+              <p>A natural-language shopping list matched to the lowest-priced in-stock items across several supermarket chains.</p>
+              <p class="entry-meta"><span>Team engagement</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Retail data is inconsistent, changes daily and arrives in a different format from every source.</dd>
+                  <dt>The solution</dt>
+                  <dd>
+                    Our scope was the data collection and the retrieval and agent layers.
+                    <ul>
+                      <li>Collectors for three regional supermarket chains write dated snapshots with error manifests and normalise unit prices and promotions into a single product model.</li>
+                      <li>A LangGraph agent parses the free-text list, runs vector search, reranks and summarises.</li>
+                      <li>Hybrid filtering on store, branch, maximum price and stock, using Firestore vector search with Gemini embeddings. An earlier Qdrant implementation is retained.</li>
+                    </ul>
+                  </dd>
+                  <dt>Controls and evidence</dt>
+                  <dd>The model provider can be swapped (Groq, OpenAI, DeepSeek or Gemini), and the architecture is documented with UML and Mermaid diagrams.</dd>
+                  <dt>Status</dt>
+                  <dd>Team engagement.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Retail intelligence, pricing and marketplace teams.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python, Playwright, Crawlee, LangGraph, Firestore, Qdrant, Streamlit, Expo/React Native</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="simulation" aria-labelledby="simulation-title">
+      <div class="container">
+        <div class="area-head">
+          <div>
+            <h2 id="simulation-title">Simulation and decision support</h2>
+            <p class="section-intro">Deterministic engines with live operational interfaces, used to compare strategies before capital is committed.</p>
+          </div>
+          <figure class="photo"><img src="assets/photos/simulation.jpg" alt="A drone flying over a dense forest" width="1200" height="600" loading="lazy" decoding="async"></figure>
+        </div>
+        <ol class="entries" role="list">
+          <li class="entry" id="response-simulators">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-sim">
+                <title id="fig-sim">Illustration: drones leave a base to search terrain and reach fires. In testing across 30 scenes in three regimes, no learned policy beat a simple nearest-fire rule.</title>
+                <path class="i i-mist" opacity="0.4" d="M0 196 C80 166 140 214 220 186 S360 136 480 166"/>
+                <path class="i i-mist" opacity="0.4" d="M0 136 C90 106 150 156 240 126 S380 86 480 106"/>
+                <path class="i i-mist" opacity="0.4" d="M0 76 C100 56 170 96 260 71 S400 36 480 51"/>
+                <circle class="f-leaf" cx="22" cy="24" r="4"/><text class="c" x="32" y="28">fire</text>
+                <g class="i" transform="translate(70 24) scale(0.5)"><path d="M-7 -7 L7 7 M7 -7 L-7 7"/><circle cx="-8" cy="-8" r="4"/><circle cx="8" cy="-8" r="4"/><circle cx="-8" cy="8" r="4"/><circle cx="8" cy="8" r="4"/></g>
+                <text class="c" x="82" y="28">drone</text>
+                <text class="c" x="468" y="28" text-anchor="end">30 scenes, 3 regimes</text>
+                <path class="l dash" d="M80 186 C100 160 120 142 138 132"/>
+                <path class="l dash" d="M88 194 C170 160 220 120 260 110"/>
+                <path class="l dash" d="M88 190 C200 150 300 110 366 96"/>
+                <path class="l dash" d="M160 116 C180 100 194 90 204 84"/>
+                <path class="l dash" d="M282 114 C300 126 312 134 320 137"/>
+                <path class="l dash" d="M388 84 C394 80 398 78 402 76"/>
+                <circle class="f-leaf" opacity="0.25" cx="214" cy="78" r="12"/><circle class="f-leaf" cx="214" cy="78" r="5"/>
+                <circle class="f-leaf" opacity="0.25" cx="330" cy="140" r="12"/><circle class="f-leaf" cx="330" cy="140" r="5"/>
+                <circle class="f-leaf" opacity="0.25" cx="412" cy="72" r="12"/><circle class="f-leaf" cx="412" cy="72" r="5"/>
+                <g class="i" transform="translate(150 124)"><path d="M-7 -7 L7 7 M7 -7 L-7 7"/><circle cx="-8" cy="-8" r="4"/><circle cx="8" cy="-8" r="4"/><circle cx="-8" cy="8" r="4"/><circle cx="8" cy="8" r="4"/></g>
+                <g class="i" transform="translate(272 104)"><path d="M-7 -7 L7 7 M7 -7 L-7 7"/><circle cx="-8" cy="-8" r="4"/><circle cx="8" cy="-8" r="4"/><circle cx="-8" cy="8" r="4"/><circle cx="8" cy="8" r="4"/></g>
+                <g class="i" transform="translate(378 92)"><path d="M-7 -7 L7 7 M7 -7 L-7 7"/><circle cx="-8" cy="-8" r="4"/><circle cx="8" cy="-8" r="4"/><circle cx="-8" cy="8" r="4"/><circle cx="8" cy="8" r="4"/></g>
+                <rect class="n" x="20" y="186" width="68" height="32" rx="6"/><text class="t" x="54" y="207" text-anchor="middle">Base</text>
+                <rect class="n n-key" x="292" y="196" width="172" height="32" rx="6"/><text class="t t-key" x="378" y="217" text-anchor="middle">Simple rule unbeaten</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Emergency response, logistics</p>
+              <h3>Autonomous response-planning simulators</h3>
+              <p>Teams of autonomous drones learn to coordinate, and a live map interface lets stakeholders compare strategies before committing resources.</p>
+              <p class="entry-meta"><span>Research paper, open code</span></p>
+              <ul class="stats" role="list">
+                <li class="stat"><span class="stat-value">30</span><span class="stat-label">scenes across 3 regimes</span></li>
+                <li class="stat"><span class="stat-value">0</span><span class="stat-label">learned policies beat the simple rule</span></li>
+              </ul>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Emergency and logistics plans are costly to test in the field. A simulator lets decision-makers test them first.</dd>
+                  <dt>The solution</dt>
+                  <dd>
+                    Two connected platforms.
+                    <ul>
+                      <li><strong>Wildfire response:</strong> Drones search bushland for fires and suppress them. Policies trained with DQN, MAPPO and MADDPG are compared against a hand-written greedy expert across 30 scenes in three regimes, including a stress regime with eight fires, lossy radio and a binding battery constraint. Documented in a research paper in conference format.</li>
+                      <li><strong>Flood relief:</strong> Drones deliver medicine and water to cut-off communities, scout roads and monitor slopes at risk of failure. Built on real terrain, road, population and river data from a recent major flood event. Runs on a standard CPU laptop.</li>
+                    </ul>
+                  </dd>
+                  <dt>Controls and evidence</dt>
+                  <dd>
+                    <ul>
+                      <li>The flood model is calibrated against satellite-derived flood extents. Every calibration score and every failed acceptance gate is recorded.</li>
+                      <li>Fixed seed pools separate training, checkpoint selection and held-out reporting.</li>
+                      <li><strong>Reported finding:</strong> A simple nearest-fire rule proved very difficult to beat, and no learned policy outperformed it. The paper lists its own limitations.</li>
+                    </ul>
+                  </dd>
+                  <dt>Applicable to</dt>
+                  <dd>Logistics, emergency response, infrastructure monitoring and any problem of the form "compare strategies before committing capital". A deterministic simulation core, a streaming API and a map front end.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python, NumPy, PyTorch, PettingZoo, FastAPI, WebSockets, React, MapLibre, Cesium, pytest</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="field-operations">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-field">
+                <title id="fig-field">Diagram: farm work moves from plan to recommendation to work order to actual, with automatic warnings on application rates and pre-harvest intervals. The offline-first app queues records on the device and syncs them without creating duplicates.</title>
+                <path class="i i-mist" opacity="0.6" d="M16 52 C80 36 170 36 236 52 M16 66 C80 50 170 50 236 66 M16 80 C80 64 170 64 236 80 M16 94 C80 78 170 78 236 94 M16 108 C80 92 170 92 236 108"/>
+                <path class="f-white" d="M90 46 C83 46 79 51 79 57 C79 65 90 76 90 76 C90 76 101 65 101 57 C101 51 97 46 90 46 Z"/><circle class="f-navy" cx="90" cy="57" r="4"/>
+                <path class="f-white" d="M170 64 C163 64 159 69 159 75 C159 83 170 94 170 94 C170 94 181 83 181 75 C181 69 177 64 170 64 Z"/><circle class="f-navy" cx="170" cy="75" r="4"/>
+                <text class="c" x="16" y="134">fields, mapped</text>
+                <rect class="n" x="296" y="22" width="56" height="96" rx="8"/>
+                <path class="i i-mist" d="M308 44 H340 M308 58 H340 M308 72 H332"/>
+                <circle class="f-mist" cx="324" cy="104" r="3"/>
+                <path class="n" d="M396 84 H440 C450 84 456 77 456 69 C456 61 449 55 441 56 C439 46 430 40 420 40 C409 40 401 47 399 57 C391 57 385 63 385 71 C385 78 390 84 396 84 Z"/>
+                <path class="l" d="M354 58 C366 48 376 48 386 54" marker-end="url(#ar)"/>
+                <path class="l" d="M386 82 C376 92 366 92 354 84" marker-end="url(#ar)"/>
+                <text class="c" x="376" y="140" text-anchor="middle">offline queue, no duplicates</text>
+                <rect class="n" x="16" y="164" width="72" height="40" rx="8"/><text class="t" x="52" y="189" text-anchor="middle">Plan</text>
+                <rect class="n" x="108" y="164" width="112" height="40" rx="8"/><text class="t" x="164" y="189" text-anchor="middle">Recommend</text>
+                <rect class="n" x="240" y="164" width="112" height="40" rx="8"/><text class="t" x="296" y="189" text-anchor="middle">Work order</text>
+                <rect class="n" x="372" y="164" width="92" height="40" rx="8"/><text class="t" x="418" y="189" text-anchor="middle">Actual</text>
+                <path class="l" d="M88 184 H105" marker-end="url(#ar)"/>
+                <path class="l" d="M220 184 H237" marker-end="url(#ar)"/>
+                <path class="l" d="M352 184 H369" marker-end="url(#ar)"/>
+                <circle class="n-key" cx="350" cy="164" r="10"/><text class="t t-key" x="350" y="169" text-anchor="middle">!</text>
+                <text class="c" x="240" y="228" text-anchor="middle">rates checked, intervals warned</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Agriculture</p>
+              <h3>Field-operations and compliance platform</h3>
+              <p>A collaborative farm-management application, taken from market research to a working product.</p>
+              <p class="entry-meta"><span>Full-stack MVP</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Farm records feed audits, safety rules and cost control, and fields often have no connectivity.</dd>
+                  <dt>The solution</dt>
+                  <dd>
+                    Market study → product requirements → technical architecture report → working application.
+                    <ul>
+                      <li>Offline-first progressive web app with an idempotent sync queue, so a retry never creates a duplicate record.</li>
+                      <li>A plan → recommendation → work order → actual pipeline that validates application rates and warns automatically about pre-harvest and re-entry intervals.</li>
+                      <li>Audit evidence-pack PDF export, a cost-of-production ledger, five user roles and map views on PostGIS.</li>
+                    </ul>
+                  </dd>
+                  <dt>Relevant to</dt>
+                  <dd>Agriculture and any field-operations business with compliance obligations.</dd>
+                  <dt>Technology</dt>
+                  <dd>Next.js 14, TypeScript, Prisma, PostgreSQL/PostGIS, Leaflet, turf, pdf-lib, jose</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="churn-prediction">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-churn">
+                <title id="fig-churn">Diagram: customer records pass through business rules first and a machine-learning model second. Customers likely to leave are flagged, each prediction comes with its main reasons, and every decision is written to an audit log.</title>
+                <circle class="f-white" opacity="0.85" cx="28" cy="74" r="7"/><circle class="f-leaf" cx="52" cy="74" r="7"/><circle class="f-white" opacity="0.85" cx="76" cy="74" r="7"/><circle class="f-white" opacity="0.85" cx="100" cy="74" r="7"/>
+                <circle class="f-white" opacity="0.85" cx="28" cy="98" r="7"/><circle class="f-white" opacity="0.85" cx="52" cy="98" r="7"/><circle class="f-white" opacity="0.85" cx="76" cy="98" r="7"/><circle class="f-leaf" cx="100" cy="98" r="7"/>
+                <circle class="f-white" opacity="0.85" cx="28" cy="122" r="7"/><circle class="f-white" opacity="0.85" cx="52" cy="122" r="7"/><circle class="f-leaf" cx="76" cy="122" r="7"/><circle class="f-white" opacity="0.85" cx="100" cy="122" r="7"/>
+                <text class="c" x="64" y="152" text-anchor="middle">customers</text>
+                <path class="l" d="M114 98 H139" marker-end="url(#ar)"/>
+                <rect class="n" x="142" y="78" width="80" height="40" rx="8"/><text class="t" x="182" y="103" text-anchor="middle">Rules</text>
+                <path class="l" d="M222 98 H243" marker-end="url(#ar)"/>
+                <rect class="n" x="246" y="78" width="80" height="40" rx="8"/><text class="t" x="286" y="103" text-anchor="middle">Model</text>
+                <path class="l" d="M326 98 H347" marker-end="url(#ar)"/>
+                <text class="c" x="234" y="150" text-anchor="middle">rules first, model second</text>
+                <rect class="n" x="350" y="40" width="114" height="116" rx="8"/>
+                <text class="c" x="362" y="62">reasons</text>
+                <rect class="f-mist" x="362" y="74" width="86" height="10" rx="2"/>
+                <rect class="f-mist" x="362" y="94" width="62" height="10" rx="2"/>
+                <rect class="f-mist" x="362" y="114" width="42" height="10" rx="2"/>
+                <rect class="f-mist" x="362" y="134" width="24" height="10" rx="2"/>
+                <path class="l" d="M407 156 V173" marker-end="url(#ar)"/>
+                <rect class="n dash" x="350" y="176" width="114" height="34" rx="6"/><text class="t" x="407" y="198" text-anchor="middle">Audit log</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Subscription businesses</p>
+              <h3>Churn prediction for data-sparse businesses</h3>
+              <p>Identifies customers likely to leave, explains why, and keeps a record of every decision.</p>
+              <p class="entry-meta"><span>Demonstration on synthetic data</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Businesses with limited history and strict privacy obligations need predictions they can defend.</dd>
+                  <dt>The solution</dt>
+                  <dd>A clean-architecture churn system. Business rules run first and machine learning second. SHAP explains each prediction. A GDPR-style audit log records every decision. Served through an API and a command-line tool.</dd>
+                  <dt>Status</dt>
+                  <dd>Demonstration trained on synthetic data.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Subscription and membership businesses.</dd>
+                  <dt>Technology</dt>
+                  <dd>scikit-learn, SMOTE, SHAP, FastAPI, pytest</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="ml" aria-labelledby="ml-title">
+      <div class="container">
+        <div class="area-head">
+          <div>
+            <h2 id="ml-title">Applied machine learning with evidence</h2>
+            <p class="section-intro">Vision, fraud and prediction models, reported on held-out data with stated limitations.</p>
+          </div>
+          <figure class="photo"><img src="assets/photos/ml.jpg" alt="A crate of tomatoes at different stages of ripeness" width="1200" height="600" loading="lazy" decoding="async"></figure>
+        </div>
+        <ol class="entries" role="list">
+          <li class="entry" id="visual-inspection">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-inspect">
+                <title id="fig-inspect">Diagram: a piece of produce with two defects outlined and measured. Background removal and four segmentation methods find each defect, and an ontology reasoner returns a diagnosis together with its reasoning.</title>
+                <circle class="n" cx="112" cy="130" r="76"/>
+                <path class="i" d="M112 54 C112 44 116 38 122 34"/>
+                <path class="i i-mist" d="M120 42 C130 28 150 28 158 36 C148 46 130 48 120 42 Z"/>
+                <path class="f-mist" opacity="0.8" d="M76 114 C82 104 98 106 100 118 C102 130 88 136 80 130 C74 126 72 120 76 114 Z"/>
+                <rect class="i i-leaf dash" x="66" y="98" width="42" height="42"/>
+                <path class="f-mist" opacity="0.8" d="M134 156 C140 150 152 152 152 162 C152 172 140 174 136 168 C132 164 130 160 134 156 Z"/>
+                <rect class="i i-leaf dash" x="124" y="144" width="36" height="36"/>
+                <text class="c" x="112" y="226" text-anchor="middle">size · colour · coverage</text>
+                <path class="l" d="M176 84 C200 60 210 42 233 42" marker-end="url(#ar)"/>
+                <rect class="n" x="236" y="24" width="228" height="36" rx="6"/><text class="t" x="350" y="47" text-anchor="middle">Remove background</text>
+                <rect class="n" x="236" y="76" width="228" height="36" rx="6"/><text class="t" x="350" y="99" text-anchor="middle">Segment (4 methods)</text>
+                <rect class="n" x="236" y="128" width="228" height="36" rx="6"/><text class="t" x="350" y="151" text-anchor="middle">Ontology reasoner</text>
+                <rect class="n n-key" x="236" y="180" width="228" height="36" rx="6"/><text class="t t-key" x="350" y="203" text-anchor="middle">Diagnosis + reason</text>
+                <path class="l" d="M350 60 V73" marker-end="url(#ar)"/>
+                <path class="l" d="M350 112 V125" marker-end="url(#ar)"/>
+                <path class="l" d="M350 164 V177" marker-end="url(#ar)"/>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Agriculture, quality control</p>
+              <h3>Explainable visual inspection</h3>
+              <p>Finds, measures and explains defects on produce, and shows the reasoning behind each diagnosis.</p>
+              <p class="entry-meta"><span>Award-winning research</span></p>
+              <ul class="stats" role="list">
+                <li class="stat"><span class="stat-value">85.0%</span><span class="stat-label">F1 on a public fruit-disease benchmark</span></li>
+                <li class="stat"><span class="stat-value">4</span><span class="stat-label">segmentation methods per defect</span></li>
+              </ul>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>Recognition</dt>
+                  <dd>Originated as an academic research project and became the basis of a <strong>Best Paper Award</strong> at an international AI conference in 2025.</dd>
+                  <dt>The solution</dt>
+                  <dd>Automatic background removal, then defect segmentation by four methods (colour ranges, K-means, adaptive thresholding and edge detection). For each defect: size, colour, centre, bounding box and share of total coverage.</dd>
+                  <dt>Controls and evidence</dt>
+                  <dd>A plant-disease ontology with a reasoner encodes symptoms, colour profiles and morphology, so every diagnosis arrives with its logic.</dd>
+                  <dt>Result</dt>
+                  <dd><strong>85.0% F1 on a public fruit-disease benchmark</strong>, competitive with established deep-learning image models while remaining fully interpretable.</dd>
+                  <dt>Also delivered</dt>
+                  <dd>A web application with live parameter tuning and a real-time camera mode.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Agri-tech, food quality control and any inspection task where the reason matters as much as the result.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python, OpenCV, rembg, scikit-learn, OWL, Pellet, Streamlit</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="phishing-detection">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-phish">
+                <title id="fig-phish">Diagram: a link is scored by three independent models: gradient-boosted trees on URL features, an LSTM on characters and a language model for meaning. A confidence-weighted vote gives the verdict, and the vote re-weights automatically if the language model drops out.</title>
+                <rect class="n" x="16" y="100" width="104" height="40" rx="8"/><text class="t" x="68" y="125" text-anchor="middle">https://…</text>
+                <path class="l" d="M120 120 C140 120 138 50 157 50" marker-end="url(#ar)"/>
+                <path class="l" d="M120 120 H157" marker-end="url(#ar)"/>
+                <path class="l" d="M120 120 C140 120 138 190 157 190" marker-end="url(#ar)"/>
+                <rect class="n" x="160" y="30" width="120" height="40" rx="8"/><text class="t" x="220" y="55" text-anchor="middle">XGBoost</text>
+                <rect class="n" x="160" y="100" width="120" height="40" rx="8"/><text class="t" x="220" y="125" text-anchor="middle">LSTM</text>
+                <rect class="n dash" x="160" y="170" width="120" height="40" rx="8"/><text class="t" x="220" y="195" text-anchor="middle">Llama 3.1</text>
+                <path class="l" d="M280 50 C300 50 298 120 313 120"/>
+                <path class="l dash" d="M280 190 C300 190 298 120 313 120"/>
+                <path class="l" d="M280 120 H313" marker-end="url(#ar)"/>
+                <rect class="n" x="316" y="100" width="76" height="40" rx="8"/><text class="t" x="354" y="125" text-anchor="middle">Vote</text>
+                <path class="l" d="M392 120 H409" marker-end="url(#ar)"/>
+                <rect class="n n-key" x="412" y="96" width="52" height="48" rx="8"/>
+                <path class="i i-navy" d="M438 106 L450 111 V120 C450 128 444 133 438 135 C432 133 426 128 426 120 V111 Z"/>
+                <path class="i i-navy" d="M432 120 L436 124 L444 116"/>
+                <text class="c" x="438" y="164" text-anchor="middle">verdict</text>
+                <text class="c" x="300" y="228" text-anchor="middle">re-weights if one drops out</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Security and fraud</p>
+              <h3>Multi-model phishing detection</h3>
+              <p>Three independent models vote on whether a link is malicious, and the service continues if one drops out.</p>
+              <p class="entry-meta"><span>Benchmarked ensemble</span></p>
+              <ul class="stats" role="list">
+                <li class="stat"><span class="stat-value">97.1%</span><span class="stat-label">LSTM accuracy on 62.5k held-out URLs</span></li>
+                <li class="stat"><span class="stat-value">99.6%</span><span class="stat-label">LSTM ROC AUC on the same set</span></li>
+                <li class="stat"><span class="stat-value">92.0%</span><span class="stat-label">ensemble accuracy, 1.71 s per URL</span></li>
+              </ul>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Any single model has a blind spot. Three different model types cover for one another.</dd>
+                  <dt>The solution</dt>
+                  <dd>XGBoost on 20+ URL features plus TF-IDF, a bidirectional LSTM on character sequences, and Llama 3.1 (via Groq) for semantic analysis with reasoning. An orchestrator fuses their confidence-weighted scores. If the language model is unavailable, the remaining models are re-weighted automatically.</dd>
+                  <dt>Results</dt>
+                  <dd>
+                    <ul>
+                      <li>The LSTM, trained on 250k URLs, reached <strong>97.1% accuracy, 98.3% precision, 95.8% recall and 99.6% ROC AUC</strong> on a 62.5k held-out set.</li>
+                      <li>The full ensemble reached 92.0% accuracy at 1.71 seconds per URL on a 600-sample benchmark.</li>
+                      <li>Benchmark scripts for each model and for the ensemble are included, so the figures can be reproduced.</li>
+                    </ul>
+                  </dd>
+                  <dt>Also delivered</dt>
+                  <dd>A web interface with confidence indicators and per-model breakdowns, a command-line tool and a Python API.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Security, fraud and trust-and-safety teams.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python, XGBoost, PyTorch, Groq/Llama 3.1, scikit-learn, Streamlit</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <div class="area-head">
+          <div>
+            <h2 id="research-title">Advanced research</h2>
+            <p class="section-intro">Computational biology, quantum computing and multi-agent reinforcement learning, taken from paper to working software.</p>
+          </div>
+          <figure class="photo"><img src="assets/photos/research.jpg" alt="Gloved hands pipetting a sample into a test tube" width="1200" height="600" loading="lazy" decoding="async"></figure>
+        </div>
+        <ol class="entries" role="list">
+          <li class="entry" id="molecular-docking">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-docking">
+                <title id="fig-docking">Illustration: a small molecule docked in a protein pocket, with two alternative poses outlined. Poses from three docking engines are rescored and then validated.</title>
+                <path class="n" d="M30 92 C40 42 120 30 170 54 C212 74 214 114 196 142 C180 166 150 152 138 172 C124 198 70 208 44 182 C20 160 22 122 30 92 Z"/>
+                <g class="i i-mist dash" opacity="0.7" transform="rotate(-24 140 112) translate(-8 18)">
+                  <path d="M140.4 106 L140.4 118 L130 124 L119.6 118 L119.6 106 L130 100 Z"/>
+                  <path d="M161.2 106 L161.2 118 L150.8 124 L140.4 118 L140.4 106 L150.8 100 Z"/>
+                </g>
+                <g class="i i-mist dash" opacity="0.7" transform="rotate(18 140 112) translate(6 -22)">
+                  <path d="M140.4 106 L140.4 118 L130 124 L119.6 118 L119.6 106 L130 100 Z"/>
+                  <path d="M161.2 106 L161.2 118 L150.8 124 L140.4 118 L140.4 106 L150.8 100 Z"/>
+                </g>
+                <g class="i i-leaf w2">
+                  <path d="M140.4 106 L140.4 118 L130 124 L119.6 118 L119.6 106 L130 100 Z"/>
+                  <path d="M161.2 106 L161.2 118 L150.8 124 L140.4 118 L140.4 106 L150.8 100 Z"/>
+                  <path d="M161.2 106 L172 99"/>
+                  <circle cx="175" cy="97" r="3"/>
+                </g>
+                <text class="c" x="112" y="226" text-anchor="middle">poses compared across engines</text>
+                <rect class="n" x="232" y="28" width="72" height="34" rx="6"/><text class="t" x="268" y="50" text-anchor="middle">Vina</text>
+                <rect class="n" x="312" y="28" width="72" height="34" rx="6"/><text class="t" x="348" y="50" text-anchor="middle">DiffDock</text>
+                <rect class="n" x="392" y="28" width="72" height="34" rx="6"/><text class="t" x="428" y="50" text-anchor="middle">Boltz-2</text>
+                <path class="l" d="M268 62 V80 H428 V62 M348 62 V80"/>
+                <path class="l" d="M348 80 V101" marker-end="url(#ar)"/>
+                <rect class="n" x="278" y="104" width="140" height="40" rx="8"/><text class="t" x="348" y="129" text-anchor="middle">Rescore poses</text>
+                <path class="l" d="M348 144 V173" marker-end="url(#ar)"/>
+                <rect class="n n-key" x="278" y="176" width="140" height="40" rx="8"/><text class="t t-key" x="348" y="201" text-anchor="middle">Validate</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Drug discovery, gene therapy</p>
+              <h3>Molecular docking and binding-affinity research</h3>
+              <p>Multi-engine docking pipelines and foundation-model research for drug discovery and gene therapy.</p>
+              <p class="entry-meta"><span>Proprietary engagement</span></p>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>Note</dt>
+                  <dd>Proprietary engagement. Described at summary level only.</dd>
+                  <dt>The challenge</dt>
+                  <dd>Different docking engines produce different poses. Teams need a way to compare, rescore and validate them.</dd>
+                  <dt>Scope</dt>
+                  <dd>
+                    <ul>
+                      <li>Docking pipelines that combine several engines (AutoDock Vina, DiffDock and Boltz-2), with pose rescoring and validation.</li>
+                      <li>Foundation-model research on protein-ligand binding affinity and pose-confidence estimation.</li>
+                      <li>Molecular dynamics simulation and engineering of viral capsids for gene-therapy delivery, and quantum methods for molecular simulation.</li>
+                      <li>Agentic architectures with memory, planning and tool orchestration, plus research on agentic explainability.</li>
+                    </ul>
+                  </dd>
+                  <dt>Relevant to</dt>
+                  <dd>Biotech, pharma and gene-therapy R&amp;D.</dd>
+                  <dt>Tools</dt>
+                  <dd>AutoDock Vina, DiffDock, Boltz-2, GNINA, molecular dynamics, Qiskit, PennyLane</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="drug-likeness">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-druglike">
+                <title id="fig-druglike">Diagram: 17,967 compounds are cross-checked against 142 approved-drug seeds across five databases and clustered into a labelled set of about 14,400 drug-like and 3,200 non-drug-like compounds. A classifier is trained, then a validity review checks what its score really means.</title>
+                <rect class="n" x="16" y="40" width="148" height="40" rx="8"/><text class="t" x="90" y="65" text-anchor="middle">17,967 compounds</text>
+                <rect class="n" x="188" y="40" width="112" height="40" rx="8"/><text class="t" x="244" y="65" text-anchor="middle">Cross-check</text>
+                <rect class="n" x="324" y="40" width="140" height="40" rx="8"/><text class="t" x="394" y="65" text-anchor="middle">Cluster</text>
+                <path class="l" d="M164 60 H185" marker-end="url(#ar)"/>
+                <path class="l" d="M300 60 H321" marker-end="url(#ar)"/>
+                <text class="c" x="244" y="100" text-anchor="middle">142 drug seeds, 5 databases</text>
+                <path class="l" d="M394 80 V112 H90 V137" marker-end="url(#ar)"/>
+                <rect class="n" x="16" y="140" width="148" height="40" rx="8"/><text class="t" x="90" y="165" text-anchor="middle">Labelled set</text>
+                <rect class="n" x="188" y="140" width="112" height="40" rx="8"/><text class="t" x="244" y="165" text-anchor="middle">Classifier</text>
+                <rect class="n n-key" x="324" y="140" width="140" height="40" rx="8"/><text class="t t-key" x="394" y="165" text-anchor="middle">Validity review</text>
+                <path class="l" d="M164 160 H185" marker-end="url(#ar)"/>
+                <path class="l" d="M300 160 H321" marker-end="url(#ar)"/>
+                <text class="c" x="90" y="204" text-anchor="middle">14.4k drug-like, 3.2k not</text>
+                <text class="c" x="394" y="204" text-anchor="middle">score partly circular</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Cheminformatics</p>
+              <h3>Drug-likeness modelling with validity review</h3>
+              <p>A labelled dataset and classifier built from 17,967 compounds in a public medicinal-plant database, with an independent review of what the score means.</p>
+              <p class="entry-meta"><span>Research with independent validity review</span></p>
+              <ul class="stats" role="list">
+                <li class="stat"><span class="stat-value">0.999</span><span class="stat-label">headline AUC, partly circular</span></li>
+                <li class="stat"><span class="stat-value">0.945</span><span class="stat-label">AUC from a single-feature rule</span></li>
+              </ul>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The solution</dt>
+                  <dd>A pipeline that cross-references 142 approved-drug seeds across 5 public databases. Clustering and PCA outlier removal yield about 14.4k drug-like and 3.2k non-drug-like compounds. Fingerprint-based structural splits, SMOTE/ADASYN for class imbalance, and an XGBoost classifier.</dd>
+                  <dt>The validity review</dt>
+                  <dd>The headline AUC of about 0.999 is partly circular, because the labels derive from the same features. A single-feature rule already reaches 0.945 AUC, so the next phase requires verified negative examples.</dd>
+                  <dt>Why it is included</dt>
+                  <dd>It shows the validity check we apply to any model before calling it complete.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Cheminformatics and ML teams that want an independent review of a result.</dd>
+                  <dt>Technology</dt>
+                  <dd>Python, RDKit, pandas, scikit-learn, imbalanced-learn, XGBoost, ChEMBL API</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+          <li class="entry" id="quantum-compression">
+            <figure class="plate blueprint">
+              <svg viewBox="0 0 480 240" role="img" aria-labelledby="fig-quantum">
+                <title id="fig-quantum">Diagram: an image patch is split into frequency bands by a quantum Fourier transform, a trained variational circuit learns which bands to keep, and the result is measured on real quantum hardware and under simulated noise, then scored by PSNR and SSIM.</title>
+                <text class="c" x="250" y="24" text-anchor="middle">real hardware and simulated noise</text>
+                <g class="f-white">
+                  <rect x="16" y="84" width="15" height="15" opacity="0.9"/><rect x="32" y="84" width="15" height="15" opacity="0.6"/><rect x="48" y="84" width="15" height="15" opacity="0.3"/><rect x="64" y="84" width="15" height="15" opacity="0.15"/>
+                  <rect x="16" y="100" width="15" height="15" opacity="0.6"/><rect x="32" y="100" width="15" height="15" opacity="0.9"/><rect x="48" y="100" width="15" height="15" opacity="0.6"/><rect x="64" y="100" width="15" height="15" opacity="0.3"/>
+                  <rect x="16" y="116" width="15" height="15" opacity="0.3"/><rect x="32" y="116" width="15" height="15" opacity="0.6"/><rect x="48" y="116" width="15" height="15" opacity="0.9"/><rect x="64" y="116" width="15" height="15" opacity="0.6"/>
+                  <rect x="16" y="132" width="15" height="15" opacity="0.15"/><rect x="32" y="132" width="15" height="15" opacity="0.3"/><rect x="48" y="132" width="15" height="15" opacity="0.6"/><rect x="64" y="132" width="15" height="15" opacity="0.9"/>
+                </g>
+                <text class="c" x="48" y="166" text-anchor="middle">patch</text>
+                <path class="l" d="M84 116 H107" marker-end="url(#ar)"/>
+                <path class="l" d="M110 56 H372 M110 96 H372 M110 136 H372 M110 176 H372 M372 56 V176"/>
+                <rect class="n" x="124" y="40" width="56" height="152" rx="8"/><text class="t" x="152" y="121" text-anchor="middle">QFT</text>
+                <rect class="n" x="204" y="42" width="40" height="28" rx="6"/><text class="t" x="224" y="61" text-anchor="middle">Rθ</text>
+                <rect class="n" x="204" y="82" width="40" height="28" rx="6"/><text class="t" x="224" y="101" text-anchor="middle">Rθ</text>
+                <rect class="n" x="204" y="122" width="40" height="28" rx="6"/><text class="t" x="224" y="141" text-anchor="middle">Rθ</text>
+                <rect class="n" x="204" y="162" width="40" height="28" rx="6"/><text class="t" x="224" y="181" text-anchor="middle">Rθ</text>
+                <path class="l" d="M268 56 V104 M292 136 V184"/>
+                <circle class="f-white" cx="268" cy="56" r="4"/>
+                <circle class="i" cx="268" cy="96" r="8"/><path class="i" d="M260 96 H276"/>
+                <circle class="f-white" cx="292" cy="136" r="4"/>
+                <circle class="i" cx="292" cy="176" r="8"/><path class="i" d="M284 176 H300"/>
+                <rect class="n" x="316" y="42" width="40" height="28" rx="6"/><path class="i" d="M324 62 A12 12 0 0 1 348 62 M336 62 L344 52"/>
+                <rect class="n" x="316" y="82" width="40" height="28" rx="6"/><path class="i" d="M324 102 A12 12 0 0 1 348 102 M336 102 L344 92"/>
+                <rect class="n" x="316" y="122" width="40" height="28" rx="6"/><path class="i" d="M324 142 A12 12 0 0 1 348 142 M336 142 L344 132"/>
+                <rect class="n" x="316" y="162" width="40" height="28" rx="6"/><path class="i" d="M324 182 A12 12 0 0 1 348 182 M336 182 L344 172"/>
+                <path class="l" d="M372 116 H405" marker-end="url(#ar)"/>
+                <g class="f-white">
+                  <rect x="408" y="84" width="15" height="15" opacity="0.8"/><rect x="424" y="84" width="15" height="15" opacity="0.6"/><rect x="440" y="84" width="15" height="15" opacity="0.4"/><rect x="456" y="84" width="15" height="15" opacity="0.3"/>
+                  <rect x="408" y="100" width="15" height="15" opacity="0.6"/><rect x="424" y="100" width="15" height="15" opacity="0.8"/><rect x="440" y="100" width="15" height="15" opacity="0.6"/><rect x="456" y="100" width="15" height="15" opacity="0.4"/>
+                  <rect x="408" y="116" width="15" height="15" opacity="0.4"/><rect x="424" y="116" width="15" height="15" opacity="0.6"/><rect x="440" y="116" width="15" height="15" opacity="0.8"/><rect x="456" y="116" width="15" height="15" opacity="0.6"/>
+                  <rect x="408" y="132" width="15" height="15" opacity="0.3"/><rect x="424" y="132" width="15" height="15" opacity="0.4"/><rect x="440" y="132" width="15" height="15" opacity="0.6"/><rect x="456" y="132" width="15" height="15" opacity="0.8"/>
+                </g>
+                <rect class="i i-leaf w2" x="407" y="83" width="65" height="65"/>
+                <text class="c" x="440" y="166" text-anchor="middle">kept bands</text>
+                <text class="c" x="250" y="226" text-anchor="middle">scored by PSNR and SSIM</text>
+              </svg>
+            </figure>
+            <div class="entry-body">
+              <p class="eyebrow">Quantum computing</p>
+              <h3>Hybrid quantum-classical compression</h3>
+              <p>A hybrid compressor tested on real quantum hardware and under realistic noise.</p>
+              <p class="entry-meta"><span>Executed on real hardware</span></p>
+              <ul class="stats" role="list">
+                <li class="stat"><span class="stat-value">50</span><span class="stat-label">image patches scored</span></li>
+                <li class="stat"><span class="stat-value">6</span><span class="stat-label">noise levels tested</span></li>
+              </ul>
+              <details>
+                <summary>Read the full note</summary>
+                <dl>
+                  <dt>The challenge</dt>
+                  <dd>Claims about quantum advantage are easy to make and hard to verify. This work runs the circuits on real hardware and measures them against a classical baseline.</dd>
+                  <dt>The solution</dt>
+                  <dd>A Quantum Fourier Transform splits image patches from a standard benchmark into frequency bands. A variational quantum circuit, trained with PennyLane, learns which bands to keep.</dd>
+                  <dt>Method</dt>
+                  <dd>Evaluated on real quantum hardware (Qiskit Runtime) and under gate noise in a simulator, against a classical thresholding baseline. Scored with PSNR and SSIM over 50 patches at 6 noise levels.</dd>
+                  <dt>Delivered as</dt>
+                  <dd>Self-contained packages, single-file notebook versions, verification scripts and publication-ready figure generation.</dd>
+                  <dt>Relevant to</dt>
+                  <dd>Organisations assessing where quantum methods are, and are not, ready.</dd>
+                  <dt>Technology</dt>
+                  <dd>Qiskit, Qiskit-Aer, IBM Quantum Runtime, PennyLane, NumPy</dd>
+                </dl>
+              </details>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact blueprint on-navy" aria-labelledby="cta-title">
+      <div class="container cta-grid">
+        <div>
+          <h2 id="cta-title">What are you building?</h2>
+          <p>Tell us what you're working on and we'll get back to you within two working days.</p>
+        </div>
+        <a class="btn btn-leaf arrow" href="contact.html">Start a project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-navy">
+    <div class="container footer-grid">
+      <a href="index.html"><img src="assets/qriosity-logo-horizontal-white.svg" alt="Qriosity Labs home" width="184" height="29"></a>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-meta">
+        <p>@qriositylabs</p>
+        <p>© 2026 Qriosity Labs</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
