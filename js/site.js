@@ -50,6 +50,19 @@
     root.classList.add("reveal-live");
   }
 
+  // ---------- touch screens have no hover: a photo shows full colour while it sits in the middle of the screen
+  if (window.matchMedia("(hover: none)").matches && "IntersectionObserver" in window) {
+    var focusBand = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        entry.target.classList.toggle("is-active", entry.isIntersecting);
+      });
+    }, { rootMargin: "-35% 0px -35% 0px" });
+
+    document.querySelectorAll(".photo").forEach(function (photo) {
+      focusBand.observe(photo);
+    });
+  }
+
   // ---------- contact form: validate, then open the visitor's email app with the details filled in.
   // The address comes from the form's mailto: action, which is also the fallback when JS is off.
   var form = document.getElementById("project-form");

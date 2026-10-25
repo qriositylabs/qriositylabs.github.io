@@ -902,6 +902,7 @@ a:hover {
 
 /* ---------- photos: duotone images, one per area of work */
 .photo {
+  position: relative;
   margin: 0;
   overflow: hidden;
   aspect-ratio: 2 / 1;
@@ -914,6 +915,27 @@ a:hover {
   height: 100%;
   object-fit: cover;
   transition: transform 600ms var(--ease-out);
+}
+
+/* the full-colour twin sits over the duotone and fades in on hover, keyboard focus in the card,
+   or (on touch screens, via js/site.js) while the photo is in the middle of the screen */
+.photo .photo-color {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 450ms ease, transform 600ms var(--ease-out);
+}
+
+.card-media:focus-within .photo-color,
+.photo.is-active .photo-color {
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .card-media:hover .photo-color,
+  .photo:hover .photo-color {
+    opacity: 1;
+  }
 }
 
 /* work page: area heading and intro beside its photo */
@@ -1563,7 +1585,8 @@ a:hover {
   box-shadow: 0 16px 32px -20px rgba(16, 25, 53, 0.45);
 }
 
-.card-media:hover .photo img {
+.card-media:hover .photo img,
+.area-head .photo:hover img {
   transform: scale(1.04);
 }
 
@@ -1739,6 +1762,7 @@ a:hover {
   .entry:hover,
   .card-media:hover,
   .card-media:hover .photo img,
+  .area-head .photo:hover img,
   .arrow:hover::after {
     transform: none;
   }

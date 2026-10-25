@@ -2,7 +2,7 @@
 
 All five photos are from Unsplash under the Unsplash License: free for commercial use, modification allowed, attribution appreciated but not required (https://unsplash.com/license). Licenses were checked on each photo page on 25 Oct 2026.
 
-Each was cropped to 2:1, resized to 1200 x 600, and mapped to a duotone from blueprint navy (#101935) in the shadows to pale blue (#E2E9F8) in the highlights. The originals are not stored here.
+Each was cropped to 2:1, resized to 1200 x 600, and mapped to a duotone from blueprint navy (#101935) in the shadows to pale blue (#E2E9F8) in the highlights. Each also has a full-colour twin (`*-color.jpg`, with the same crop and size) that fades in when the photo or its card is hovered. The originals are not stored here.
 
 | File | Used for | Photographer | Source |
 |---|---|---|---|
